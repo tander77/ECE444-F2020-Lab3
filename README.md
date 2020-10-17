@@ -1,21 +1,24 @@
 # Torin Anderson
 
 this repo is a clone of
-https://github.com/miguelgrinberg/flasky
+https://github.com/miguelgrinberg/flasky with added dockerization
 
-# Activity 1 Screenshot
+# Starting the System
+![image](Lab4DockerStart.jpg)
 
-![picture](Activity1.jpg)
+# Browser Output
+![image](Lab4DockerBrowser.jpg)
 
-# Activity 2 Screenshots
+# Logs
+![image](Lab4DockerLogs.jpg)
 
-![picture](Activity2Part1.jpg)
+# How to build
+To build the docker image, simply run the following terminal command from within the main workspace folder (ECE444-F2020-Lab3): "docker build -t flask-sample:latest ."
 
-![picture](Activity2Part2.jpg)
+Then to run the container, use the following command: "docker run -d -p 5000:5000 flask-sample" Then you can go to localhost:5000 to see the webpage.
 
-![picture](Activity2Part3.jpg)
+On my Windows machine, the image file is located at "C:\Users\Torin\AppData\Local\Docker\wsl\data"
 
-![picture](Activity2Part4.jpg)
+# Difference between Docker container and Virtual Machine
+A Docker container runs as any other lightweight program, not utilizing any more memory on the host machine than it needs. A virtual machine on the other hand will take up a set amount of memory and hard drive space in order to function. This is so that it can better emulate the simulated operating system and allow users to utilize the full extent of the virtualized OS. As such, VMs have more overhead than containers and will thus be both slower and more memory intensive.
 
-# Activity 3 Answer
-SQL databases allow for relationships between rows from the same or different tables. This means that if the name of an item in a table changes, this change will not impact other table items that reference it. SQL databases give rows a primary key which acts as their main identifier, but they can also contain foreign keys that act as the link between the row and other rows. NoSQL databases differ in that they have collections instead of table and documents instead of records. These databases were not built with relationships in mind, as such the process to reference other rows is too difficult. But this makes it more efficient for entries which do not reference eachother, or denormalizednormalized collections which contain all of the information about an entry within the document without referencing other entries.
